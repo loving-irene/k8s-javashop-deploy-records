@@ -17,6 +17,7 @@
 kubectl create secret generic your_secret_name \
      --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
      --type=kubernetes.io/dockerconfigjson
+     --namespace=ns-javashop
 ```
 
 #### 部署配置中心
