@@ -7,3 +7,5 @@
     * [namespace和Node设置](k8s部署/namespace和node设置.md)
     * [基础设施安装](k8s部署/基础设施安装.md)
     * [API部署](k8s部署/API部署.md)
+    * [UI部署](k8s部署/UI部署.md)
+    * [部署网关](k8s部署/部署网关.md)
