@@ -20,10 +20,22 @@ kubectl create secret generic your_secret_name \
      --namespace=ns-javashop
 ```
 
+如果上述的方式不ok，也可以使用命令行的方式来生成
+```
+kubectl create secret docker-registry aliyun-secret \
+--docker-server=registry.cn-hangzhou.aliyuncs.com --docker-username=shopdev001@1943257728010728 \
+--docker-password=xxxx \
+--namespace=ns-javashop
+```
+这里的密码是登录密码，不是访问凭证。
+
+
 #### 部署配置中心
 
 源码库中的 config 下的文件可能存在格式问题，在排错的过程中需要注意一下。
 
 #### 部署API
+
+编辑 `api.yaml` 文件时，特别要注意的是 `xxl-job`，除了地址、用户名和密码，还有**对应的仓库名**需要改变。
 
 验证可以使用集群中的任意机器IP，不过要等所有的服务都起来才可以。
